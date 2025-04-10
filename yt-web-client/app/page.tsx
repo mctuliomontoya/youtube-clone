@@ -13,13 +13,13 @@ export default async function Home() {
       <main>
         {
           videos.map((video) => (
-            <>
-            <Link href={`/watch?v=${video.filename}`} key={video.id}>
+            <div key={video.id}>
+            <Link href={`/watch?v=${video.filename}`}>
               <Image src={'/thumbnail.png'} alt='video' width={120} height={80}
                      className={styles.thumbnail}/>
             </Link>
               <p>{video.filename? video.filename : 'nothing'}</p>
-            </>
+            </div>
 
           ))
         }
